@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aztec/accounts": "^0.85.0-alpha-testnet.11",
+    "@aztec/aztec.js": "^0.85.0-alpha-testnet.11",
     "@aztec/bb.js": "0.72.1",
+    "@aztec/noir-contracts.js": "^0.85.0-alpha-testnet.11",
     "@noir-lang/noir_js": "1.0.0-beta.2",
+    "@types/node": "^22.15.18",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0",
     "prettier": "^3.5.3",
@@ -27,7 +31,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
-    "typescript": "~5.8.3",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"
   }

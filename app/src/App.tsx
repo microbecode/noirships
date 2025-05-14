@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './assets/noir/EasyPrivateVoting.js';
 
 // Customizable constants
 const BOARD_SIZE = 10;

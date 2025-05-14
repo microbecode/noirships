@@ -1,0 +1,5 @@
+# Used to refresh artifacts in the frontend
+aztec-nargo compile
+aztec codegen ./target/ -o src/artifacts
+cp src/artifacts/EasyPrivateVoting.ts ../app/src/assets/noir
+cp target/circuit-EasyPrivateVoting.json ../app/src/target
