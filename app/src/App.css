@@ -40,3 +40,54 @@
 .read-the-docs {
   color: #888;
 }
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.boards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px;
+}
+
+.board-section {
+  text-align: center;
+}
+
+.board {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.board-row {
+  display: flex;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+.cell.hit {
+  background-color: #f88;
+}
+
+.cell.miss {
+  background-color: #ccc;
+}
+
+/* Own board: show your ship positions */
+.cell.ship {
+  background-color: #ddd;
+  cursor: default;
+}
