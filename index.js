@@ -1,9 +1,6 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 import { UltraHonkBackend } from '@aztec/bb.js';
 import { Noir } from '@noir-lang/noir_js';
-import circuit from "../circuit/target/circuit.json";
+import circuit from "./circuit/target/circuit.json";
 
 const show = (id, content) => {
  const container = document.getElementById(id);
@@ -11,8 +8,8 @@ const show = (id, content) => {
  container.appendChild(document.createElement("br"));
 };
 
-const submit = async () => {
-try {
+document.getElementById("submit").addEventListener("click", async () => {
+ try {
   const noir = new Noir(circuit);
 const backend = new UltraHonkBackend(circuit.bytecode);
 const age = document.getElementById("age").value;
@@ -23,23 +20,8 @@ show("logs", "Generating proof... ⏳");
 const proof = await backend.generateProof(witness);
 show("logs", "Generated proof... ✅");
 show("results", proof.proof);
+
  } catch {
   show("logs", "Oh 💔");
  }
-}
-
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <h1>Noir app</h1>
-  <div>
-    <input id="age" type="number" placeholder="Enter age" />
-    <button id="submit" onClick={submit}>Submit Age</button>
-  </div>
-  <div>
-    <div id="logs"><h2>Logs</h2></div>
-    <div id="results"><h2>Proof</h2></div>
-  </div>
-    </div>
-  );
-}
+});
